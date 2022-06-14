@@ -1,14 +1,25 @@
 import * as React from 'react'
-import { ChakraProvider, Box, VStack, Grid, theme } from '@chakra-ui/react'
-import { ColorModeSwitcher } from './ColorModeSwitcher'
+import { ChakraProvider, VStack, Grid, Container } from '@chakra-ui/react'
+import { Route, Routes } from 'react-router-dom'
+import Home from '../pages/Home'
+import Header from '../components/Header/Header'
+import theme from '../theme'
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign='center' fontSize='xl'>
-      <Grid minH='100vh' p={3}>
-        <ColorModeSwitcher justifySelf='flex-end' />
-        <VStack spacing={8}></VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+export const App = () => {
+  return (
+    <ChakraProvider theme={theme}>
+      <Header />
+      <Container textAlign='center' fontSize='xl'>
+        <Grid minH='100vh' p={3}>
+          <VStack spacing={8}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route />
+              <Route />
+            </Routes>
+          </VStack>
+        </Grid>
+      </Container>
+    </ChakraProvider>
+  )
+}
