@@ -14,7 +14,7 @@ import { ColorModeSwitcher } from './ColorModeSwitcher'
 import { Link as RLink } from 'react-router-dom'
 import Search from '../Search/Search'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import Menu from '../Menu/Menu'
+import Menu from './Menu/Menu'
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()

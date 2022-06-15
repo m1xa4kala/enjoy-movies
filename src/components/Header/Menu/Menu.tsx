@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../Logo/Logo'
+import Logo from '../../Logo/Logo'
 
 const Menu: React.FC<DrawerProps> = ({ onClose, isOpen }) => {
   return (
