@@ -9,7 +9,11 @@ export const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Container textAlign='center' fontSize='xl'>
+      <Container
+        maxW={['sm', 'md', 'container.sm', 'container.md']}
+        textAlign='center'
+        fontSize='xl'
+      >
         <Grid minH='100vh' p={3}>
           <VStack spacing={8}>
             <Routes>
