@@ -12,9 +12,6 @@ const styles = {
       bg: mode('eggshell', 'black')(props),
       color: mode('blackAlpha.800', 'white')(props),
     },
-    fontSizes: {
-      
-    },
     h1: {
       color: mode('blackAlpha.800', 'eggshell')(props),
     },
@@ -30,6 +27,7 @@ const styles = {
 const colors = {
   deepLemon: '#f5c518',
   eggshell: '#f0e7db',
+  raisinBlack: '#212121'
 }
 
 const config: ThemeConfig = {
@@ -38,9 +36,7 @@ const config: ThemeConfig = {
 }
 
 const components: Record<string, ComponentStyleConfig> = {
-  Button: {
-    baseStyle: {},
-  },
+  
 }
 
 const theme = extendTheme({

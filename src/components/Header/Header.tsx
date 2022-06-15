@@ -24,7 +24,7 @@ const Header = () => {
       <Flex
         py={1}
         height='10'
-        bg={useColorModeValue('#212121', 'whiteAlpha.200')}
+        bg={useColorModeValue('raisinBlack', 'whiteAlpha.200')}
         alignItems='center'
       >
         <Container maxW={['sm', 'md', 'container.sm', 'container.md']}>
