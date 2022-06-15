@@ -27,7 +27,7 @@ const styles = {
 const colors = {
   deepLemon: '#f5c518',
   eggshell: '#f0e7db',
-  raisinBlack: '#212121'
+  raisinBlack: '#212121',
 }
 
 const config: ThemeConfig = {
@@ -35,9 +35,7 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 
-const components: Record<string, ComponentStyleConfig> = {
-  
-}
+const components: Record<string, ComponentStyleConfig> = {}
 
 const theme = extendTheme({
   config,
