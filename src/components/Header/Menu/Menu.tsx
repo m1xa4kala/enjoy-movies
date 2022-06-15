@@ -8,6 +8,7 @@ import {
   DrawerProps,
   Flex,
   IconButton,
+  Spacer,
 } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -23,6 +24,7 @@ const Menu: React.FC<DrawerProps> = ({ onClose, isOpen }) => {
               <Link to='/'>
                 <Logo width={10} height={12} />
               </Link>
+              <Spacer/>
               <IconButton
                 onClick={onClose}
                 variant='ghost'
@@ -33,9 +35,7 @@ const Menu: React.FC<DrawerProps> = ({ onClose, isOpen }) => {
             </Flex>
           </DrawerHeader>
           <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            <Link to='/top'>Top 250 Movies</Link>
           </DrawerBody>
         </Container>
       </DrawerContent>
