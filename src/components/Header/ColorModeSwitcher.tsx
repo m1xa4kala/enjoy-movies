@@ -11,7 +11,7 @@ export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = props => {
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon)
 
   return (
-    <AnimatePresence exitBeforeEnter initial={true}>
+    <AnimatePresence exitBeforeEnter initial={false}>
       <motion.div
         style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
