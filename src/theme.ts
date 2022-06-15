@@ -9,13 +9,27 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: (props: ThemeComponentProps) => ({
     body: {
-      bg: mode('#f0e7db', '#000')(props),
+      bg: mode('eggshell', 'black')(props),
+      color: mode('blackAlpha.800', 'white')(props),
+    },
+    fontSizes: {
+      
+    },
+    h1: {
+      color: mode('blackAlpha.800', 'eggshell')(props),
+    },
+    h2: {
+      color: mode('blackAlpha.800', 'deepLemon')(props),
+    },
+    h3: {
+      color: mode('blackAlpha.800', 'eggshell')(props),
     },
   }),
 }
 
 const colors = {
   deepLemon: '#f5c518',
+  eggshell: '#f0e7db',
 }
 
 const config: ThemeConfig = {
