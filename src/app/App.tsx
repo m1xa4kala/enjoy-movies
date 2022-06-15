@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import Header from '../components/Header/Header'
 import theme from '../theme'
+import Top from '../pages/Top'
 
 export const App = () => {
   return (
@@ -14,12 +15,11 @@ export const App = () => {
         textAlign='center'
         fontSize='xl'
       >
-        <Grid minH='100vh' p={3}>
+        <Grid minH='100vh' pt={3}>
           <VStack spacing={8}>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route />
-              <Route />
+              <Route path='/top' element={<Top />} />
             </Routes>
           </VStack>
         </Grid>
