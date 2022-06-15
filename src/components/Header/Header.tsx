@@ -1,24 +1,61 @@
 import React from 'react'
-import { Box, Container, Flex, Spacer, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Container,
+  DrawerOverlay,
+  Flex,
+  Link,
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react'
 import Logo from '../Logo/Logo'
 import { ColorModeSwitcher } from './ColorModeSwitcher'
-import { Link } from 'react-router-dom'
+import { Link as RLink } from 'react-router-dom'
+import Search from '../Search/Search'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import Menu from '../Menu/Menu'
 
 const Header = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
-    <Box py={2} bg={useColorModeValue('#282a35', 'whiteAlpha.200')}>
-      <Container maxW='container.lg'>
-        <nav>
-          <Flex maxW='container.lg'>
-            <Link to='/'>
-              <Logo />
+    <header>
+      <Flex
+        py={1}
+        height='10'
+        bg={useColorModeValue('#212121', 'whiteAlpha.200')}
+        alignItems='center'
+      >
+        <Container maxW={['sm', 'md', 'container.sm', 'container.md']}>
+          <Flex w='full' alignItems='center'>
+            <Link as={RLink} mr='1.5' to='/'>
+              <Logo width={7} />
             </Link>
-            <Spacer />
+            <Button
+              onClick={onOpen}
+              mr='1.5'
+              size='xs'
+              fontSize='xs'
+              aria-label='menu'
+              variant='ghost'
+              _hover={{ bg: 'whiteAlpha.200' }}
+              color='eggshell'
+              leftIcon={<HamburgerIcon fontSize='md' color='deepLemon' />}
+            >
+              Menu
+            </Button>
+            <Menu isOpen={isOpen} onClose={onClose}>
+              <DrawerOverlay />
+            </Menu>
+            <Box mr='1.5' w='full'>
+              <Search />
+            </Box>
             <ColorModeSwitcher />
           </Flex>
-        </nav>
-      </Container>
-    </Box>
+        </Container>
+      </Flex>
+    </header>
   )
 }
 
