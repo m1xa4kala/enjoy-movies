@@ -22,7 +22,7 @@ const Menu: React.FC<DrawerProps> = ({ onClose, isOpen }) => {
           <DrawerHeader>
             <Flex>
               <Link to='/'>
-                <Logo width={10} height={12} />
+                <Logo width={14} height={12} />
               </Link>
               <Spacer/>
               <IconButton

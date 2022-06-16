@@ -30,7 +30,7 @@ const Header = () => {
         <Container maxW={['sm', 'md', 'container.sm', 'container.md']}>
           <Flex w='full' alignItems='center'>
             <Link as={RLink} mr='1.5' to='/'>
-              <Logo width={7} />
+              <Logo width={8} />
             </Link>
             <Button
               onClick={onOpen}
