@@ -1088,17 +1088,6 @@
       "crew": "Rachel Brosnahan, Alex Borstein",
       "imDbRating": "8.6",
       "imDbRatingCount": "109929"
-    },
-    {
-      "id": "tt4786824",
-      "rank": "100",
-      "title": "The Crown",
-      "fullTitle": "The Crown (2016)",
-      "year": "2016",
-      "image": "https://imdb-api.com/images/original/MV5BZmY0MzBlNjctNTRmNy00Njk3LWFjMzctMWQwZDAwMGJmY2MyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6716_AL_.jpg",
-      "crew": "Claire Foy, Olivia Colman",
-      "imDbRating": "8.6",
-      "imDbRatingCount": "192288"
     }
   ],
   "errorMessage": ""
