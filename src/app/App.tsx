@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { ChakraProvider, VStack, Grid, Container } from '@chakra-ui/react'
+import { ChakraProvider, Grid, Container } from '@chakra-ui/react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import Header from '../components/Header/Header'
 import theme from '../theme'
-import Top from '../pages/Top'
+import TopMovies from '../pages/TopMovies'
+import TopTVs from '../pages/TopTVs'
 
 export const App = () => {
   return (
@@ -16,12 +17,11 @@ export const App = () => {
         fontSize='xl'
       >
         <Grid minH='100vh' pt={3}>
-          <VStack spacing={8}>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/top' element={<Top />} />
-            </Routes>
-          </VStack>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/movies-top100' element={<TopMovies />} />
+            <Route path='/tvs-top100' element={<TopTVs />} />
+          </Routes>
         </Grid>
       </Container>
     </ChakraProvider>
