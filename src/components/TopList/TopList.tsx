@@ -5,13 +5,14 @@ import { ITopItem } from '../../models/top-item'
 
 interface ITopListProps {
   items: ITopItem[]
+  title: string
 }
 
-const TopList: React.FC<ITopListProps> = ({ items }) => {
+const TopList: React.FC<ITopListProps> = ({ items, title }) => {
   return (
     <>
-      <Heading as='h2' alignSelf='flex-start'>
-        Top 100 Movies
+      <Heading as='h2' textAlign='left' mb='2'>
+        {title}
       </Heading>
       <Table
         size={['sm', 'sm', 'md']}
@@ -20,9 +21,7 @@ const TopList: React.FC<ITopListProps> = ({ items }) => {
       >
         <Thead bgColor={useColorModeValue('raisinBlack', 'whiteAlpha.200')}>
           <Tr>
-            <Th color={useColorModeValue('eggshell', 'deepLemon')}>
-              Rank
-            </Th>
+            <Th color={useColorModeValue('eggshell', 'deepLemon')}>Rank</Th>
             <Th></Th>
             <Th color={useColorModeValue('eggshell', 'deepLemon')}>Title</Th>
             <Th color={useColorModeValue('eggshell', 'deepLemon')}>Rate</Th>
