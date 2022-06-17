@@ -1,14 +1,17 @@
 import React from 'react'
 import { Heading, Table, Tbody, Th, Thead, Tr, useColorModeValue } from '@chakra-ui/react'
-import movies from '../../mock/top250movies.json'
 import TopItem from './TopItem/TopItem'
+import { ITopItem } from '../../models/top-item'
 
-const TopList: React.FC = () => {
-  const { items } = movies
+interface ITopListProps {
+  items: ITopItem[]
+}
+
+const TopList: React.FC<ITopListProps> = ({ items }) => {
   return (
     <>
       <Heading as='h2' alignSelf='flex-start'>
-        Top 250 Movies
+        Top 100 Movies
       </Heading>
       <Table variant='striped' colorScheme={useColorModeValue('blackAlpha', 'gray')}>
         <Thead bgColor={useColorModeValue('raisinBlack', 'whiteAlpha.200')}>
@@ -21,7 +24,14 @@ const TopList: React.FC = () => {
         </Thead>
         <Tbody>
           {items.map(movie => (
-            <TopItem key={movie.id} movie={movie} />
+            <TopItem
+              key={movie.id}
+              rank={movie.rank}
+              image={movie.image}
+              fullTitle={movie.fullTitle}
+              crew={movie.crew}
+              imDbRating={movie.imDbRating}
+            />
           ))}
         </Tbody>
       </Table>
