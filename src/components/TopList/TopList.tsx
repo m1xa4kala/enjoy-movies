@@ -13,10 +13,16 @@ const TopList: React.FC<ITopListProps> = ({ items }) => {
       <Heading as='h2' alignSelf='flex-start'>
         Top 100 Movies
       </Heading>
-      <Table variant='striped' colorScheme={useColorModeValue('blackAlpha', 'gray')}>
+      <Table
+        size={['sm', 'sm', 'md']}
+        variant='striped'
+        colorScheme={useColorModeValue('blackAlpha', 'gray')}
+      >
         <Thead bgColor={useColorModeValue('raisinBlack', 'whiteAlpha.200')}>
           <Tr>
-            <Th color={useColorModeValue('eggshell', 'deepLemon')}>Rank</Th>
+            <Th color={useColorModeValue('eggshell', 'deepLemon')}>
+              Rank
+            </Th>
             <Th></Th>
             <Th color={useColorModeValue('eggshell', 'deepLemon')}>Title</Th>
             <Th color={useColorModeValue('eggshell', 'deepLemon')}>Rate</Th>
