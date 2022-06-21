@@ -5,21 +5,21 @@ import { SearchIcon } from '@chakra-ui/icons'
 const Search = () => {
   return (
     <form>
-      <InputGroup size='xs'>
+      <InputGroup size='sm'>
         <Input
           placeholder='Search movie'
           _placeholder={{ color: 'blackAlpha.500' }}
           focusBorderColor='deepLemon'
           color='blackAlpha.800'
           bgColor='eggshell'
-          size='xs'
+          size='sm'
         />
         <InputRightElement>
           <IconButton
             variant='unstyled'
             aria-label='click to search'
             display='inline-flex'
-            size='xs'
+            size='sm'
             color='deepLemon'
             icon={<SearchIcon />}
           />
