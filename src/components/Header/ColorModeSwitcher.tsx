@@ -21,8 +21,8 @@ export const ColorModeSwitcher: React.FC<ColorModeSwitcherProps> = props => {
         transition={{ duration: 0.2 }}
       >
         <IconButton
-          size='xs'
-          fontSize='md'
+          size='sm'
+          fontSize='lg'
           variant='ghost'
           colorScheme={useColorModeValue('purple', 'orange')}
           marginLeft='2'
