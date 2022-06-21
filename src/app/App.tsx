@@ -12,7 +12,7 @@ export const App = () => {
     <ChakraProvider theme={theme}>
       <Header />
       <Container
-        maxW={['sm', 'md', 'container.sm', 'container.md']}
+        maxW={['sm', 'container.sm', 'container.md', 'container.lg']}
         textAlign='center'
         fontSize='xl'
       >
